@@ -12,7 +12,7 @@
 
 #include "istack.h"
 
-Node2_t* nodeCreate(int value) {
+Node2_t* node2Create(int value) {
     Node2_t* node = malloc(sizeof(Node2_t));
     node->data = value;
     node->next = NULL;
@@ -84,7 +84,7 @@ int istackPop( IntStack_t *stack ){
  * POST: istackTop( stack ) == item
  */
 int istackPush( IntStack_t *stack, int item){
-	Node2_t* newNode = nodeCreate(item);
+	Node2_t* newNode = node2Create(item);
     if (istackIsEmpty(*stack)) {
         stack->head = newNode;
     }
